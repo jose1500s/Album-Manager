@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Album</title>
+    <link rel="stylesheet" href="../static/css/agergar.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+   <div class="form__agregar">
+        <form action="/editarAlbum/{{album.0}}" method="POST">
+            <center><h1>Editar Album</h1></center>
+            <label for="album">Album:</label>
+            <input type="text" name="album" class="input" placeholder="Ingresa el Album" value="{{ album.1 }}">
+            <label for="artista">Artista:</label>
+            <input type="text" name="artista" class="input" placeholder="Ingresa el Artista" value="{{ album.2 }}">
+            <label for="año">Año:</label>
+            <input type="text" name="anio" class="input" placeholder="Ingresa el Año" 
+            value="{{ album.3 }}">
+            <button type="submit" class="btn_registrar">Editar</button>
+        </form>
+   </div>
+</body>
+</html>

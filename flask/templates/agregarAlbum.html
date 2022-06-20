@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Album</title>
+    <link rel="stylesheet" href="../static/css/agergar.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+   <div class="form__agregar">
+        <form action="/nuevoAlbum" method="POST">
+            <center><h1>Agregar Album</h1></center>
+            
+            <label for="album">Album:</label>
+            <input type="text" name="album" class="input" placeholder="Ingresa el Album">
+            <label for="artista">Artista:</label>
+            <input type="text" name="artista" class="input" placeholder="Ingresa el Artista">
+            <label for="año">Año:</label>
+            <input type="text" name="anio" class="input" placeholder="Ingresa el Año">
+            <button type="submit" class="btn_registrar">Registrar</button>
+        </form>
+   </div>
+   
+</body>
+</html>

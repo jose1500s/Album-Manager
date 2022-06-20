@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+
+</head>
+<body>
+    <h1>Gestor de Albums</h1>
+    <div class="card">
+        <div class="left-side">
+          <h2>Albums Registrados</h2>
+          <button type="submit"><a href="/agregar">Agregar Nuevo Album</a></button>
+        </div>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+          <script>
+          Toastify({
+            text: "{{ message }}",
+            className: "info",
+            duration: 3000,
+            gravity: "top",
+            position: "right",
+            style: {
+              background: "linear-gradient(to right, #00b09b, #96c93d)",
+              color: "#fff",
+              fontSize: "1.2rem",
+              textAlign: "center",
+              borderRadius: "0.5rem"
+            }
+          }).showToast();
+          </script>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+       <div class="table">
+        <table>
+          <thead>
+            <tr class="albums_columns">
+                <th>ID</th>
+                <th>Album</th>
+                <th>Artista</th>
+                <th>Año</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for album in albums %}
+            <tr class="data_albums">
+                <td>{{ album.0 }}</td>
+                <td>{{ album.1 }}</td>
+                <td>{{ album.2 }}</td>
+                <td>{{ album.3 }}</td>
+                <td class="acciones">
+                  <a href="">Ver</a>
+                  <a href="/editar/{{album.0}}">Editar</a>
+                  <a href="/eliminar/{{album.0}}"">Eliminar</a>
+                </td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+       </div>
+    </div>
+</body>
+</html>

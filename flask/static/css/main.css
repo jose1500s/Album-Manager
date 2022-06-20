@@ -1,0 +1,130 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: monospace;
+
+}
+h1 {
+    font-size: 80px;
+    color: rgb(62, 223, 232);
+    text-align: center;
+    margin: 0;
+}
+.card  h2 {
+    text-align: center;
+    font-size: 60px;
+    margin: 0;
+}
+.card {
+    width: 1200px;
+    height: auto;
+    background: rgba( 0, 0, 0, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 9.5px );
+    -webkit-backdrop-filter: blur( 9.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 3px;
+    color: #F9F9F9;
+    padding: 16px;
+    transition: all .3s;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.albums {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-size: 1.4em;
+}
+
+.table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9em;
+}
+
+.acciones a {
+    text-decoration: none;
+    color: #38c47c;
+    font-size: 0.8em;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 20px;
+}
+
+.left-side button {
+    background-color: #38c47c;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.left-side button a {
+    color: #F9F9F9;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.acciones {
+    padding-left: 200px;
+}
+
+.data_albums td {
+    padding: 20px;
+}
+
+.albums_columns th {
+    color: aqua;
+}
+
+tr.data_albums {
+    text-align: center;
+}
+
+/* media query para tablet */
+@media screen and (max-width: 768px) {
+   
+    .card {
+        width: 100%;
+        height: auto;
+        
+    }
+    .main {
+        margin: 0;
+    }
+    .left-side {
+        width: 100%;
+        flex-direction: column;
+    }
+    .table {
+        width: 100%;
+        font-size: 1.1em;
+        flex-direction: column;
+    }
+    .card h2 {
+        font-size: 35px;
+    }
+    .left-side button {
+        padding: 5px;
+    }
+}
